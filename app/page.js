@@ -1,12 +1,9 @@
-import WSIViewer from "@/components/WSIViewer"
+import WSIViewer from "@/components/WSIViewer";
 
-
-const Home = () => {
+export default function Home() {
   return (
     <>
       <WSIViewer/>
     </>
-  )
+  );
 }
-
-export default Home
