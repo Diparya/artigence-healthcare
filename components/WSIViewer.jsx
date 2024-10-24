@@ -10,6 +10,7 @@ const WSIViewer = () => {
 
   useEffect(() => {
     // Initialize main viewer (Zoomed-in view)
+    if (typeof window !== 'undefined') {
     const viewer = OpenSeadragon({
       element: viewerRef.current,
       tileSources: {
@@ -28,6 +29,7 @@ const WSIViewer = () => {
     }, 1000);
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
+  }
   }, []);
 
   // Function to format the date and time
